@@ -33,7 +33,7 @@ namespace invalid
         private void OnDestroy()
         {
             if (_Instance != this) return;
-            _Instance = null;
+            ResetStatic();
         }
         // https://docs.unity3d.com/Manual/ExecutionOrder.html
         // https://docs.unity3d.com/ScriptReference/RuntimeInitializeLoadType.html
