@@ -1,0 +1,15 @@
+Order of Execution + RuntimeInitializeOnLoadMethod
+
+[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterAssembliesLoaded)]
+[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSplashScreen)]
+[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+Awake()
+OnEnable()
+[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+[RuntimeInitializeOnLoadMethod]
+Start()
+Update()
+OnApplicationQuit()
+OnDisable()
+OnDestroy()
