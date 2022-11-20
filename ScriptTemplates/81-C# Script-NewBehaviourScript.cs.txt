@@ -6,7 +6,7 @@ namespace invalid
     internal sealed class #SCRIPTNAME# : MonoBehaviour
     {
         private static #SCRIPTNAME# _Instance;
-        private #SCRIPTNAME# Instance => _Instance ? _Instance : new GameObject("#SCRIPTNAME#").AddComponent<#SCRIPTNAME#>();
+        // private #SCRIPTNAME# Instance => _Instance ? _Instance : new GameObject("#SCRIPTNAME#").AddComponent<#SCRIPTNAME#>();
         
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void ResetStatic()
