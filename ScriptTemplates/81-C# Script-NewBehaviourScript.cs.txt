@@ -1,45 +1,23 @@
-namespace invalid
+namespace #NAMESPACE#
 {
     using UnityEngine;
     
     [DisallowMultipleComponent]
     internal sealed class #SCRIPTNAME# : MonoBehaviour
     {
-        private static #SCRIPTNAME# _Instance;
-        // private #SCRIPTNAME# Instance => _Instance ? _Instance : new GameObject("#SCRIPTNAME#").AddComponent<#SCRIPTNAME#>();
         
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        private static void ResetStatic()
-        {
-            _Instance = null;
-        }
-        private void Awake()
-        {
-            {
-                if (_Instance != null)
-                {
-                    Destroy(gameObject);
-                    return;
-                }
-                _Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-        }
-        
+        // [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        // private static void ResetStatic(){}
+        // private void Awake(){}
         // private void OnEnable(){}
         // private void Start(){}
         // private void Update(){}
         // private void OnApplicationQuit(){}
         // private void OnDisable(){}
+        // private void OnDestroy(){}
         
-        private void OnDestroy()
-        {
-            {
-                if (_Instance != this) return;
-                ResetStatic();
-            }
-        }
         // https://docs.unity3d.com/Manual/ExecutionOrder.html
         // https://docs.unity3d.com/ScriptReference/RuntimeInitializeLoadType.html
+        
     }
 }
